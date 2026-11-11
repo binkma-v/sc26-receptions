@@ -1,5 +1,7 @@
 # 🎉 SC26 Receptions & Social Events — The Unofficial Guide
 
+<sub>Maintained by [Bin Ma](https://binkma-v.github.io/) (UC Merced)</sub>
+
 **Supercomputing 2026 (SC26)** · November 15–20, 2026 · Chicago, IL · McCormick Place
 
 A community list of receptions, parties, happy hours, and networking socials happening during SC26 week — official conference receptions, vendor parties, and community events, with registration links.
@@ -111,4 +113,4 @@ Without the browser tools connected, the skill falls back to a click-through che
 
 ---
 
-<sub>Last updated November 11, 2026 · Times and venues may change — check the links · Maintained by [Bin Ma](https://binkma-v.github.io/) (UC Merced)</sub>
+<sub>Last updated November 11, 2026 · Times and venues may change — check the links</sub>
