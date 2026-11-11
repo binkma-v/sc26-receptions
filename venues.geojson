@@ -49,7 +49,7 @@
       "properties": {
         "venue": "McCormick Place",
         "address": "2301 S King Dr, Chicago, IL",
-        "events": "Mon 19:00–21:00 — Grand Opening Gala Reception (official) (SC26) @ Exhibit Hall | Tue 17:15–19:00 — Posters & Art of HPC Reception (official) (SC26) @ West Building, Level 3 (North & West Prefunction) | Wed 14:00–16:00 — Tiki Bar Happy Hour (MinIO + NVIDIA) @ MinIO booth #1016 | Wed 15:00–17:00 — Happy Hour (TrueNAS × Western Digital) @ TrueNAS booth #5005 | Wed 16:00–18:00 — \"Quantummania\" Reception (AWS & Classiq) @ AWS booth #4819 | Wed from 16:00 — HLRS Industry Reception (HLRS, sponsored by HPE & NVIDIA) @ HLRS booth #4106 | Wed 16:30–18:00 — Students and Early Career Alumni Reception (SC Students & Early Career program participants and alumni; computing-mystery games, hors d'oeuvres, swag raffles) @ South Building, Grand Ballroom Lobby | Wed 17:00–20:00 — WHPC Games Night (Women in HPC; board games — a change of pace from receptions) @ Room W196-A | Thu 15:00–17:00 — Awards Ceremony and Receptions (official) (SC26; SC27 launch at 16:15) @ Skyline Ballroom",
+        "events": "Mon 19:00–21:00 — Grand Opening Gala Reception (official) (SC26) @ Exhibit Hall | Tue 17:15–19:00 — Posters & Art of HPC Reception (official) (SC26) @ West Building, Level 3 (North & West Prefunction) | Wed 14:00–16:00 — Tiki Bar Happy Hour (MinIO + NVIDIA) @ MinIO booth #1016 | Wed 15:00–17:00 — Happy Hour (TrueNAS × Western Digital) @ TrueNAS booth #5005 | Wed 16:00–18:00 — \"Quantummania\" Reception (AWS & Classiq) @ AWS booth #4819 | Wed from 16:00 — HLRS Industry Reception (HLRS, sponsored by HPE & NVIDIA) @ HLRS booth #4106 | Wed 16:30–18:00 — Students@SC Alumni Reception (official) (SC Students & Early Career programs; computing-mystery games, hors d'oeuvres, swag raffles) @ South Building, Grand Ballroom Lobby | Wed 17:00–20:00 — WHPC Games Night (Women in HPC; board games — a change of pace from receptions) @ Room W196-A | Thu 15:00–17:00 — Awards Ceremony and Receptions (official) (SC26; SC27 launch at 16:15) @ Skyline Ballroom",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL",
         "marker-color": "#1f6feb",
         "marker-symbol": "star"
@@ -67,7 +67,7 @@
       "properties": {
         "venue": "LM Studio",
         "address": "808 S Michigan Ave, Chicago, IL",
-        "events": "Mon 12:00–19:00 — AI Infrastructure Forum (Meta; talks from NVIDIA, Oracle, Google; happy hour from 17:00)",
+        "events": "Mon 12:00–19:00 — AI Infrastructure Forum (Meta; speakers from Meta, NVIDIA, Google, Oracle, Jump Trading & more; happy hour from 17:00)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=LM%20Studio%2C%20808%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
@@ -139,7 +139,7 @@
       "properties": {
         "venue": "Spybar",
         "address": "646 N Franklin St, Chicago, IL",
-        "events": "Mon 20:00–22:00 — After Hours at SC26: Cocktails Underground (VAST Data)",
+        "events": "Mon 20:00–22:00 — After Hours at SC26: Cocktails Underground (VAST Data, co-hosted by Boost Run)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=Spybar%2C%20646%20N%20Franklin%20St%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
@@ -211,7 +211,7 @@
       "properties": {
         "venue": "Revel Motor Row",
         "address": "2400 S Michigan Ave, Chicago, IL",
-        "events": "Mon 16:30–17:30 — DDN Convergence Networking Reception (DDN, supported by NVIDIA; closes the 13:00–17:30 DDN Convergence summit) | Tue 15:30–18:30 — Hammerspace User Group (Hammerspace (user group, not a party)) | Wed 08:00–10:00 — Breakfast @ SC26 (VAST Data) | Wed 12:00–14:00 — SLED AI Industry Roundtable (VAST Data × Cambridge Computer × NVIDIA; lunch roundtable on AI infrastructure & HPC)",
+        "events": "Mon 16:30–17:30 — DDN Convergence Networking Reception (DDN, supported by NVIDIA; closes the 13:00–17:30 DDN Convergence summit) | Tue 15:30–18:30 — Hammerspace User Group (Hammerspace (user group, not a party)) | Wed 08:00–10:00 — Breakfast @ SC26 (VAST Data) | Wed 12:00–14:00 — SLED AI Industry Roundtable (VAST Data × Cambridge Computer × NVIDIA; lunch discussion for higher-ed & research computing leaders)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
