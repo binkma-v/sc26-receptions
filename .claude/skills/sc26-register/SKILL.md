@@ -21,6 +21,7 @@ Ask only for what the user hasn't already told you, in a single short message:
 From the README tables, build a shortlist:
 
 - Drop events that are ❌ sold out / closed, that need a badge the user doesn't have, or fall on days they aren't there.
+- Mark ⚠️ rows as **unconfirmed** — they have no public page. Only plan around them if the user already has an invite or confirmation email.
 - Flag overlaps (see the README's "Scheduling collisions" section) and travel time between venues using the 📍 addresses — e.g. River North ↔ McCormick Place / Museum Campus is a cab ride, not a walk.
 - Sort each pick into what it needs:
   - **Register online** — the row has a registration link.
