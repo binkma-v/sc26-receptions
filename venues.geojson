@@ -283,7 +283,7 @@
       "properties": {
         "venue": "F1 Arcade",
         "address": "1 W Grand Ave, Chicago, IL",
-        "events": "Tue 18:30–21:30 — SC26 Networking Event (Lenovo; SC26 badge required for entry)",
+        "events": "Tue 18:30–21:30 — SC26 Networking Event (Lenovo with AMD, Intel & NVIDIA; racing simulators)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=F1%20Arcade%2C%201%20W%20Grand%20Ave%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"

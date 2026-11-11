@@ -59,7 +59,7 @@ A community list of receptions, parties, happy hours, and networking socials hap
 | 18:00–21:00 | Executive Reception | Netris | [📍 Chicago Loop](https://www.google.com/maps/search/?api=1&query=The%20Loop%2C%20Chicago%2C%20IL)<br>*address shared after approval* | Host approval required — [Luma](https://luma.com/07jlscz6) |
 | 18:30–20:30 | On Tap, Off the Record | VAST Data & **TensorWave** | [📍 Fatpour McCormick](https://www.google.com/maps/search/?api=1&query=Fatpour%20Tap%20Works%20McCormick%2C%202206%20S%20Indiana%20Ave%2C%20Chicago%2C%20IL)<br>2206 S Indiana Ave | Host approval required — [Luma](https://luma.com/8hg81fe3) |
 | 18:30–21:30 | Behind the Build: From Energy to Tokens | SLYD, ElioVP & Paiton; cigars & bourbon | [📍 The Clayton](https://www.google.com/maps/search/?api=1&query=The%20Clayton%2C%20212%20N%20Canal%20St%2C%20Chicago%2C%20IL)<br>212 N Canal St | Host approval required — [Luma](https://luma.com/g3suftya) |
-| 18:30–21:30 | SC26 Networking Event | Lenovo; SC26 badge required for entry | [📍 F1 Arcade](https://www.google.com/maps/search/?api=1&query=F1%20Arcade%2C%201%20W%20Grand%20Ave%2C%20Chicago%2C%20IL)<br>1 W Grand Ave | ⚠️ No public page found — invite / registration email only |
+| 18:30–21:30 | SC26 Networking Event | Lenovo with **AMD**, **Intel** & **NVIDIA**; racing simulators | [📍 F1 Arcade](https://www.google.com/maps/search/?api=1&query=F1%20Arcade%2C%201%20W%20Grand%20Ave%2C%20Chicago%2C%20IL)<br>1 W Grand Ave | Register — [Lenovo](https://lenovo-events.swoogo.com/sc26networking) |
 | 19:00–22:00 | Industry Reception | HPE, sponsored by **AMD** | [📍 Adler Planetarium](https://www.google.com/maps/search/?api=1&query=Adler%20Planetarium%2C%201300%20S%20DuSable%20Lake%20Shore%20Dr%2C%20Chicago%2C%20IL)<br>1300 S DuSable Lake Shore Dr | **No RSVP — badge only** — [HPE at SC26](https://www.hpe.com/us/en/events/supercomputing.html) |
 | 19:00–22:00 | Networking Reception | Oracle, co-sponsored by NVIDIA | [📍 Untitled Supper Club](https://www.google.com/maps/search/?api=1&query=Untitled%20Supper%20Club%2C%20111%20W%20Kinzie%20St%2C%20Chicago%2C%20IL)<br>111 W Kinzie St | ⚠️ Unverified — no public listing found (reported as registration closed) |
 
@@ -68,7 +68,7 @@ A community list of receptions, parties, happy hours, and networking socials hap
 | Time | Event | Host / Notes | Venue | Registration |
 |---|---|---|---|---|
 | 08:00–10:00 | Breakfast @ SC26 | VAST Data | [📍 Revel Motor Row](https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2400 S Michigan Ave | ⚠️ No public page found — invite / registration email only |
-| 12:00–14:00 | SLED AI Industry Roundtable | VAST Data × Cambridge Computer × NVIDIA; lunch roundtable on AI infrastructure & HPC | [📍 Revel Motor Row](https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2400 S Michigan Ave | ⚠️ No public page found — invite / registration email only |
+| 12:00–14:00 | SLED AI Industry Roundtable | VAST Data × Cambridge Computer × NVIDIA; lunch roundtable on AI infrastructure & HPC | [📍 Revel Motor Row](https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2400 S Michigan Ave | ⚠️ Couldn't verify details (site blocks automated checks) — [VAST page](https://events.vastdata.com/sc26sledroundtable) |
 | 14:00–16:00 | Tiki Bar Happy Hour | MinIO + **NVIDIA** | [📍 McCormick Place](https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL)<br>*MinIO booth #1016* | Walk-up at booth — [MinIO SC26 page](https://www.min.io/events/lp/minio-sc26) |
 | 16:00–18:00 | "Quantummania" Reception | **AWS** & Classiq | [📍 McCormick Place](https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL)<br>*AWS booth #4819* | Walk-up at booth — [press release](https://www.globenewswire.com/news-release/2026/11/11/3400895/0/en/classiq-to-showcase-application-layer-hpc-and-quantum-synthesis-at-sc26.html) |
 | 16:00–17:30 | SC26 Public Sector Gathering | Carahsoft, Hammerspace, Spectra Logic, Versity | [📍 Fatpour McCormick](https://www.google.com/maps/search/?api=1&query=Fatpour%20Tap%20Works%20McCormick%2C%202206%20S%20Indiana%20Ave%2C%20Chicago%2C%20IL)<br>2206 S Indiana Ave<br>*2nd floor* | Free — [Eventbrite](https://www.eventbrite.com/e/the-sc26-public-sector-gathering-tickets-1997638311966) |
@@ -97,14 +97,16 @@ A community list of receptions, parties, happy hours, and networking socials hap
 
 ## 🔎 Looking for a specific company?
 
-- **AMD** — HPE Industry Reception sponsored by AMD (Tue 19:00, Adler Planetarium); no RSVP, badge only.
+- **AMD** — HPE Industry Reception sponsored by AMD (Tue 19:00, Adler Planetarium; no RSVP, badge only) and Lenovo's F1 Arcade night (Tue 18:30).
 - **AWS** — "Quantummania" reception with Classiq at AWS booth #4819 (Wed 16:00).
 - **Cerebras** — After Dark Nightcap with VAST Data (Mon 20:00, Fatpour, next to McCormick Place).
 - **Cambridge Computer** — Bites, Brews & Bird's-Eye Views (Mon 12:00, VU Rooftop, free with badge), a client dinner with NVIDIA (Mon 18:00, invitation only), and Petaflop (Tue).
 - **Cisco** — Pre-Gala Reception (Mon 16:45) and the invitation-only 200kW Happy Hour (Wed 18:30), both at Cisco Studio, 2337 S Michigan Ave.
 - **Google Cloud** — Advanced Computing Community rooftop reception (Mon 17:00, VU Rooftop), plus a joint reception with NVIDIA (date/venue on its RSVP page).
-- **Intel & Supermicro** — the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
-- **NVIDIA** — Cambridge client dinner (Mon, invitation only), Petaflop (Tue), the MinIO Tiki Bar (Wed 14:00), the 200kW Happy Hour (Wed, invitation only), and a joint reception with Google Cloud (date TBA).
+- **Intel** — Lenovo's F1 Arcade night (Tue 18:30) and the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
+- **Lenovo** — SC26 Networking Event with AMD, Intel & NVIDIA at F1 Arcade (Tue 18:30–21:30).
+- **Supermicro** — the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
+- **NVIDIA** — Cambridge client dinner (Mon, invitation only), Petaflop and Lenovo's F1 Arcade night (Tue), the MinIO Tiki Bar (Wed 14:00), the 200kW Happy Hour (Wed, invitation only), and a joint reception with Google Cloud (date TBA).
 - **TensorWave** — On Tap, Off the Record with VAST Data (Tue 18:30, Fatpour).
 - **VAST Data** — Nightcap with Cerebras (Mon), TensorWave happy hour (Tue), and Hops & Flops with ByteBridge (Wed), all at Fatpour.
 
