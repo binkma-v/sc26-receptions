@@ -35,12 +35,13 @@ A community list of receptions, parties, happy hours, and networking socials hap
 | Time | Event | Host / Notes | Venue | Registration |
 |---|---|---|---|---|
 | 07:30–10:30 | Starfish User Group | Starfish Storage (user group, breakout sessions) | [📍 VU Rooftop Bar](https://www.google.com/maps/search/?api=1&query=VU%20Rooftop%20Bar%20%28Hilton%20Garden%20Inn%20McCormick%20Place%29%2C%20133%20E%20Cermak%20Rd%2C%20Chicago%2C%20IL)<br>133 E Cermak Rd<br>*22nd floor* | RSVP — [Starfish page](https://starfishstorage.com/starfish-user-group-sc26/) |
-| 12:00–19:00 | AI Infrastructure Forum | Meta; talks from NVIDIA, Oracle, Google; happy hour from 17:00 | [📍 LM Studio](https://www.google.com/maps/search/?api=1&query=LM%20Studio%2C%20808%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>808 S Michigan Ave | ⚠️ No public page found — invite / registration email only |
-| 12:00–16:00 | Bites, Brews, & Bird-Eye Views | Community event | [📍 VU Rooftop Bar](https://www.google.com/maps/search/?api=1&query=VU%20Rooftop%20Bar%20%28Hilton%20Garden%20Inn%20McCormick%20Place%29%2C%20133%20E%20Cermak%20Rd%2C%20Chicago%2C%20IL)<br>133 E Cermak Rd | ⚠️ Unverified — no public listing found |
+| 12:00–19:00 | AI Infrastructure Forum | Meta; talks from NVIDIA, Oracle, Google; happy hour from 17:00 | [📍 LM Studio](https://www.google.com/maps/search/?api=1&query=LM%20Studio%2C%20808%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>808 S Michigan Ave | Invite only — [Meta event page](https://events.atmeta.com/aiinfrastructureforum) |
+| 12:00–16:00 | Bites, Brews & Bird's-Eye Views | Cambridge Computer; partner showcase with complimentary food & drinks | [📍 VU Rooftop Bar](https://www.google.com/maps/search/?api=1&query=VU%20Rooftop%20Bar%20%28Hilton%20Garden%20Inn%20McCormick%20Place%29%2C%20133%20E%20Cermak%20Rd%2C%20Chicago%2C%20IL)<br>133 E Cermak Rd | Free with SC badge; RSVP — [EventCreate](https://www.eventcreate.com/e/bitesbrewsbirdeyeviews-chicago) |
 | 14:00–16:00 | Intersect360 Research Reception — "A Slice of the Market" | Intersect360 Research | [📍 South Loop](https://www.google.com/maps/search/?api=1&query=South%20Loop%2C%20Chicago%2C%20IL)<br>*exact venue on approval* | Free, host approval required — [Luma](https://luma.com/8unfy3pr) |
 | 14:00–21:00 | The New Economics of AI + an Evening at Wrigley Field | WEKA executive summit (leadership discussion) | [📍 Wrigley Field](https://www.google.com/maps/search/?api=1&query=Wrigley%20Field%2C%201060%20W%20Addison%20St%2C%20Chicago%2C%20IL)<br>1060 W Addison St | Confirm interest — [WEKA](https://www.weka.io/event/weka-executive-summit-2026) |
 | 16:45–18:45 | Pre-Gala Reception | Cisco | [📍 Cisco Studio (Duneyrr Wine & Beer Co.)](https://www.google.com/maps/search/?api=1&query=Cisco%20Studio%20%40%20Duneyrr%20Wine%20%26%20Beer%20Co.%2C%202337%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2337 S Michigan Ave<br>*Cisco Studio, 3rd floor* | Register (limited, subject to confirmation) — [Cisco](https://cisco.cventevents.com/event/44ebd544-b68a-4eed-b3b2-69294ca79ab9/event-overview?environment=P2) |
 | 17:00–19:00 | Advanced Computing Community Networking Reception | Google Cloud Advanced Computing Community (GCACC); workshop attendance not required | [📍 VU Rooftop Bar](https://www.google.com/maps/search/?api=1&query=VU%20Rooftop%20Bar%20%28Hilton%20Garden%20Inn%20McCormick%20Place%29%2C%20133%20E%20Cermak%20Rd%2C%20Chicago%2C%20IL)<br>133 E Cermak Rd | Register — [GCACC page](https://sites.google.com/view/advancedcomputingcommunity/sc26-workshop) |
+| 18:00–21:30 | Client Appreciation Dinner | Cambridge Computer & **NVIDIA** | [📍 Il Culaccino](https://www.google.com/maps/search/?api=1&query=Il%20Culaccino%2C%202134%20S%20Indiana%20Ave%2C%20Chicago%2C%20IL)<br>2134 S Indiana Ave<br>*enclosed patio* | Invitation only — [EventCreate](https://www.eventcreate.com/e/cambridge-and-nvidia-monday-chicago) |
 | 19:00–21:00 | Grand Opening Gala Reception *(official)* | SC26 | [📍 McCormick Place](https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL)<br>*Exhibit Hall* | Included with TP / EX registration |
 | 20:00–22:00 | After Hours at SC26: Cocktails Underground | VAST Data | [📍 Spybar](https://www.google.com/maps/search/?api=1&query=Spybar%2C%20646%20N%20Franklin%20St%2C%20Chicago%2C%20IL)<br>646 N Franklin St | ⚠️ No public page found — invite / registration email only |
 | 20:00–22:00 | After Dark Nightcap | VAST Data & **Cerebras** | [📍 Fatpour McCormick](https://www.google.com/maps/search/?api=1&query=Fatpour%20Tap%20Works%20McCormick%2C%202206%20S%20Indiana%20Ave%2C%20Chicago%2C%20IL)<br>2206 S Indiana Ave | Free — [Luma](https://luma.com/ofe8a2xq) |
@@ -90,6 +91,8 @@ A community list of receptions, parties, happy hours, and networking socials hap
 
 *Also reported for Sat Nov 14, 19:00–21:00: Students@SC Reception at [📍 Lucky Strike](https://www.google.com/maps/search/?api=1&query=Lucky%20Strike%20Chicago%2C%20322%20E%20Illinois%20St%2C%20Chicago%2C%20IL), 322 E Illinois St — Students@SC / Student Cluster Competition participants only. ⚠️ Not on the public SC26 site; check your Students@SC email.*
 
+*Date and venue not yet public: **Google Cloud & NVIDIA SC26 Reception** — [RSVP page](https://rsvp.withgoogle.com/events/google-cloud-nvidia-sc26-reception) (a separate event from the GCACC rooftop reception on Monday).*
+
 ---
 
 ## 🔎 Looking for a specific company?
@@ -97,10 +100,11 @@ A community list of receptions, parties, happy hours, and networking socials hap
 - **AMD** — HPE Industry Reception sponsored by AMD (Tue 19:00, Adler Planetarium); no RSVP, badge only.
 - **AWS** — "Quantummania" reception with Classiq at AWS booth #4819 (Wed 16:00).
 - **Cerebras** — After Dark Nightcap with VAST Data (Mon 20:00, Fatpour, next to McCormick Place).
+- **Cambridge Computer** — Bites, Brews & Bird's-Eye Views (Mon 12:00, VU Rooftop, free with badge), a client dinner with NVIDIA (Mon 18:00, invitation only), and Petaflop (Tue).
 - **Cisco** — Pre-Gala Reception (Mon 16:45) and the invitation-only 200kW Happy Hour (Wed 18:30), both at Cisco Studio, 2337 S Michigan Ave.
-- **Google Cloud** — Advanced Computing Community rooftop reception (Mon 17:00, VU Rooftop).
+- **Google Cloud** — Advanced Computing Community rooftop reception (Mon 17:00, VU Rooftop), plus a joint reception with NVIDIA (date/venue on its RSVP page).
 - **Intel & Supermicro** — the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
-- **NVIDIA** — co-host of Petaflop (Tue), the MinIO Tiki Bar (Wed 14:00), and the 200kW Happy Hour (Wed, invitation only).
+- **NVIDIA** — Cambridge client dinner (Mon, invitation only), Petaflop (Tue), the MinIO Tiki Bar (Wed 14:00), the 200kW Happy Hour (Wed, invitation only), and a joint reception with Google Cloud (date TBA).
 - **TensorWave** — On Tap, Off the Record with VAST Data (Tue 18:30, Fatpour).
 - **VAST Data** — Nightcap with Cerebras (Mon), TensorWave happy hour (Tue), and Hops & Flops with ByteBridge (Wed), all at Fatpour.
 

@@ -85,7 +85,7 @@
       "properties": {
         "venue": "VU Rooftop Bar (Hilton Garden Inn McCormick Place)",
         "address": "133 E Cermak Rd, Chicago, IL",
-        "events": "Mon 07:30–10:30 — Starfish User Group (Starfish Storage (user group, breakout sessions)) | Mon 12:00–16:00 — Bites, Brews, & Bird-Eye Views (Community event) | Mon 17:00–19:00 — Advanced Computing Community Networking Reception (Google Cloud Advanced Computing Community (GCACC); workshop attendance not required)",
+        "events": "Mon 07:30–10:30 — Starfish User Group (Starfish Storage (user group, breakout sessions)) | Mon 12:00–16:00 — Bites, Brews & Bird's-Eye Views (Cambridge Computer; partner showcase with complimentary food & drinks) | Mon 17:00–19:00 — Advanced Computing Community Networking Reception (Google Cloud Advanced Computing Community (GCACC); workshop attendance not required)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=VU%20Rooftop%20Bar%20%28Hilton%20Garden%20Inn%20McCormick%20Place%29%2C%20133%20E%20Cermak%20Rd%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
@@ -321,6 +321,24 @@
         "address": "111 W Kinzie St, Chicago, IL",
         "events": "Tue 19:00–22:00 — Networking Reception (Oracle, co-sponsored by NVIDIA) | Wed 19:00–22:00 — Supercomputing Whiskey Society (OmniScale Media; ~100 guests, 21+)",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=Untitled%20Supper%20Club%2C%20111%20W%20Kinzie%20St%2C%20Chicago%2C%20IL",
+        "marker-color": "#d73a49",
+        "marker-symbol": "bar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.622477,
+          41.853147
+        ]
+      },
+      "properties": {
+        "venue": "Il Culaccino",
+        "address": "2134 S Indiana Ave, Chicago, IL",
+        "events": "Mon 18:00–21:30 — Client Appreciation Dinner (Cambridge Computer & NVIDIA)",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Il%20Culaccino%2C%202134%20S%20Indiana%20Ave%2C%20Chicago%2C%20IL",
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
       }
