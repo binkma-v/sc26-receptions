@@ -49,7 +49,7 @@
       "properties": {
         "venue": "McCormick Place",
         "address": "2301 S King Dr, Chicago, IL",
-        "events": "Mon 19:00–21:00 — Grand Opening Gala Reception (official) (SC26) @ Exhibit Hall | Tue 17:15–19:00 — Posters & Art of HPC Reception (official) (SC26) @ West Building, Level 3 (North & West Prefunction) | Wed 14:00–16:00 — Tiki Bar Happy Hour (MinIO + NVIDIA) @ MinIO booth #1016 | Wed 16:00–18:00 — \"Quantummania\" Reception (AWS & Classiq) @ AWS booth #4819 | Wed 16:30–18:00 — Students and Early Career Alumni Reception (SC Students / Early Career programs) @ South Building, Grand Ballroom Lobby | Thu 15:00–17:00 — Awards Ceremony and Receptions (official) (SC26; SC27 launch at 16:15) @ Skyline Ballroom",
+        "events": "Mon 19:00–21:00 — Grand Opening Gala Reception (official) (SC26) @ Exhibit Hall | Tue 17:15–19:00 — Posters & Art of HPC Reception (official) (SC26) @ West Building, Level 3 (North & West Prefunction) | Wed 14:00–16:00 — Tiki Bar Happy Hour (MinIO + NVIDIA) @ MinIO booth #1016 | Wed 16:00–18:00 — \"Quantummania\" Reception (AWS & Classiq) @ AWS booth #4819 | Wed 16:30–18:00 — Students and Early Career Alumni Reception (SC Students & Early Career program participants and alumni; computing-mystery games, hors d'oeuvres, swag raffles) @ South Building, Grand Ballroom Lobby | Thu 15:00–17:00 — Awards Ceremony and Receptions (official) (SC26; SC27 launch at 16:15) @ Skyline Ballroom",
         "google_maps": "https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL",
         "marker-color": "#1f6feb",
         "marker-symbol": "star"
