@@ -111,4 +111,4 @@ Without the browser tools connected, the skill falls back to a click-through che
 
 ---
 
-<sub>Last updated November 11, 2026 · Times and venues may change — check the links · Maintained by Bin Ma (UC Merced)</sub>
+<sub>Last updated November 11, 2026 · Times and venues may change — check the links · Maintained by [Bin Ma](https://binkma-v.github.io/) (UC Merced)</sub>
