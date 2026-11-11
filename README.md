@@ -4,14 +4,16 @@
 
 A community list of receptions, parties, happy hours, and networking socials happening during SC26 week — official conference receptions, vendor parties, and community events, with registration links.
 
-🗺️ **[See every venue on one map →](venues.geojson)** · 📍 links in the tables open the venue in Google Maps · 🤖 **[Let Claude handle the RSVPs →](#-register-with-claude-optional)**
+📱 **[Phone-friendly version with map, day filters & add-to-calendar →](https://binkma-v.github.io/sc26-receptions/)**
+
+🗺️ [All venues on one map](venues.geojson) · 📍 links in the tables open Google Maps · 🤖 [Let Claude handle the RSVPs](#-register-with-claude-optional)
 
 **Notes**
 
 - All times are **Chicago time (CST, UTC−6)**.
 - Details come from organizers' public pages and registration emails as of **Nov 11, 2026** — always check the link before heading out.
 - Official SC26 receptions page: https://sc26.supercomputing.org/attendees/receptions/
-- Found one that's missing, a missing registration link, or a time change? PRs and issues welcome!
+- Found one that's missing, a missing registration link, or a time change? PRs and issues welcome! The website reads this README directly, so editing the tables here updates it. For a new venue, also add a pin to [`venues.geojson`](venues.geojson) with the same Google Maps link in `google_maps`.
 
 ---
 
@@ -103,7 +105,7 @@ This repo includes a [Claude Code](https://code.claude.com/docs) skill, `/sc26-r
 2. Clone this repo, `cd` into it, and start Claude Code with browser tools: `claude --chrome` (needs a Claude subscription login, not an API key — see [the docs](https://code.claude.com/docs/en/chrome)).
 3. Run `/sc26-register`, optionally with what you're after, e.g. `/sc26-register Tuesday night, anything with AMD or NVIDIA`.
 
-**Only have the Chrome extension?** Open this README in Chrome, open the Claude side panel, and ask something like: *"Help me register for the SC26 events on this page that I can make on Tuesday. Show me what you filled in and ask before submitting each form."*
+**Only have the Chrome extension?** Open this list in Chrome (the website or this README), open the Claude side panel, and ask something like: *"Help me register for the SC26 events on this page that I can make on Tuesday. Show me what you filled in and ask before submitting each form."*
 
 Without the browser tools connected, the skill falls back to a click-through checklist of your picks.
 
