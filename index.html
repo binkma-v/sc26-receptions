@@ -432,7 +432,8 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
 
   function badges(ev, now) {
     const b = [];
-    if (ev.start && now >= ev.start && now < ev.end) b.push(`<span class="badge good">● Happening now</span>`);
+    if (ev.end && now > ev.end) b.push(`<span class="badge">Ended</span>`);
+    else if (ev.start && now >= ev.start && now < ev.end) b.push(`<span class="badge good">● Happening now</span>`);
     if (ev.unverified) b.push(`<span class="badge warn">⚠ Unverified</span>`);
     if (ev.official) b.push(`<span class="badge official">Official SC26</span>`);
     if (ev.closed) b.push(`<span class="badge bad">Sold out / closed</span>`);
