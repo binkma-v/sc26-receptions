@@ -105,6 +105,17 @@ h2.day em { text-transform: none; letter-spacing: 0; font-weight: 400; }
 .actions { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 13px; }
 .actions button, .actions a { font: inherit; font-size: 13px; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; }
 .actions button:hover { text-decoration: underline; }
+.card { position: relative; }
+.card .row1 { padding-right: 30px; }
+.star { position: absolute; top: 6px; right: 6px; border: 0; background: none; padding: 6px; font-size: 20px; line-height: 1; color: var(--muted); cursor: pointer; }
+.star[aria-pressed="true"] { color: #e3a008; }
+.num, .stop { background: var(--accent); color: var(--accent-text); border-radius: 999px; font-weight: 700; font-size: 11px; text-align: center; }
+.num { display: inline-block; min-width: 20px; padding: 1px 6px; line-height: 18px; }
+.stop { display: flex; align-items: center; justify-content: center; width: auto !important; min-width: 22px; padding: 0 5px; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); white-space: nowrap; }
+.leg { font-size: 13px; color: var(--muted); margin: -2px 0 8px 14px; }
+.leg.bad { color: var(--warn); }
+.planbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 12px; font-size: 13px; }
+.planbar button, .planbar a { font: inherit; font-size: 13px; border: 1px solid var(--border); background: var(--surface); color: var(--accent); border-radius: 8px; padding: 5px 10px; cursor: pointer; text-decoration: none; }
 .note { color: var(--muted); font-size: 14px; margin: 10px 0; }
 .empty { color: var(--muted); padding: 24px 0; text-align: center; }
 
@@ -264,13 +275,16 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     const url = firstUrl(ev.reg);
     return [plain(ev.host), "Registration: " + plain(ev.reg) + (url ? ` ${url}` : ""), "From the SC26 receptions guide: " + window.location.href.split("#")[0]].join("\n");
   }
-  function icsHref(ev) {
-    const ics = [
-      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//sc26-receptions//EN", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
-      `UID:${ev.id}@sc26-receptions`, `DTSTAMP:${icsDate(Date.now())}`, `DTSTART:${icsDate(ev.start)}`, `DTEND:${icsDate(ev.end)}`,
+  function vevent(ev) {
+    return [
+      "BEGIN:VEVENT", `UID:${ev.id}@sc26-receptions`, `DTSTAMP:${icsDate(Date.now())}`, `DTSTART:${icsDate(ev.start)}`, `DTEND:${icsDate(ev.end)}`,
       `SUMMARY:${icsEsc(plain(ev.name))}`, `LOCATION:${icsEsc(venueLocation(ev))}`, `DESCRIPTION:${icsEsc(details(ev))}`,
-      ...(firstUrl(ev.reg) ? [`URL:${firstUrl(ev.reg)}`] : []), "END:VEVENT", "END:VCALENDAR", "",
-    ].join("\r\n");
+      ...(firstUrl(ev.reg) ? [`URL:${firstUrl(ev.reg)}`] : []), "END:VEVENT",
+    ];
+  }
+  function icsHref(evs) {
+    const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//sc26-receptions//EN", "CALSCALE:GREGORIAN",
+      ...[].concat(evs).filter((e) => e.start).flatMap(vevent), "END:VCALENDAR", ""].join("\r\n");
     return "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
   }
   function gcalHref(ev) {
@@ -345,11 +359,51 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     setTimeout(() => card.classList.remove("flash"), 1600);
   }
 
+  // ---------- my plan (stored only in this browser) ----------
+  const PLAN_KEY = "sc26-plan";
+  let stars = new Set(), shared = new Set();
+  try { stars = new Set(JSON.parse(localStorage.getItem(PLAN_KEY) || "[]")); } catch (_) {}
+  const saveStars = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify([...stars])); } catch (_) {} };
+  const inPlanView = () => state.day === "plan" || state.day === "shared";
+  const planSet = () => (state.day === "shared" ? shared : stars);
+  const short = (id) => id.replace(/^ev-/, "");
+  function readSharedFromHash() {
+    const m = location.hash.match(/^#plan=([^&]+)/);
+    return m ? new Set(decodeURIComponent(m[1]).split(",").filter(Boolean).map((s) => "ev-" + s)) : new Set();
+  }
+  function km(a, b) {
+    const R = 6371, r = Math.PI / 180, x = a.lat * r, y = b.lat * r;
+    const h = Math.sin((y - x) / 2) ** 2 + Math.cos(x) * Math.cos(y) * Math.sin(((b.lng - a.lng) * r) / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+  // Travel between consecutive picks (rough: walk ≤1.2 km at 5 km/h, else car at 25 km/h + 8 min).
+  // "⚠ conflict" only when you can't spend ~30 min at each after travel; overlapping parties are normal.
+  const STAY = 30 * 60e3;
+  function legs(evs) {
+    const out = [""];
+    let arrive = evs[0] && evs[0].start;
+    for (let i = 1; i < evs.length; i++) {
+      const a = evs[i - 1], b = evs[i];
+      if (!a.pin || !b.pin || !a.end || !b.start || !arrive) { out.push(""); arrive = b.start; continue; }
+      const d = km(a.pin.marker.getLatLng(), b.pin.marker.getLatLng());
+      const walk = d <= 1.2, mins = a.pin === b.pin ? 0 : walk ? Math.max(2, Math.round((d / 5) * 60)) : Math.round((d / 25) * 60 + 8);
+      const leave = arrive + Math.max(0, Math.min(STAY, a.end - arrive));
+      const next = Math.max(b.start, leave + mins * 60e3);
+      const conflict = next > b.end - STAY;
+      const travel = mins ? `${walk ? "🚶" : "🚕"} ~${mins} min` : "Same venue";
+      out.push(`<p class="leg${conflict ? " bad" : ""}">↓ ${travel}${conflict ? " · ⚠ conflict" : b.start < a.end ? " · overlaps" : ""}</p>`);
+      arrive = next;
+    }
+    return out;
+  }
+  let route = null;
+
   // ---------- state & render ----------
   const state = { day: "all", q: "", hideClosed: false };
   let DATA = null;
   const visible = (ev) =>
-    (state.day === "all" || ev.day.key === state.day) &&
+    (state.day === "all" || ev.day.key === state.day || (inPlanView() && planSet().has(ev.id))) &&
+    (!inPlanView() || planSet().has(ev.id)) &&
     (!state.hideClosed || !ev.closed) &&
     (!state.q || state.q.split(/\s+/).every((w) => ev.text.includes(w)));
 
@@ -365,7 +419,7 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     return b.join("");
   }
 
-  function card(ev, now) {
+  function card(ev, now, n) {
     const ended = ev.end && now > ev.end;
     const venueLine = ev.mapUrl
       ? `<a href="${esc(ev.mapUrl)}" target="_blank" rel="noopener">${esc(ev.venueName)}</a>`
@@ -375,8 +429,10 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
       ? `<a href="${gcalHref(ev)}" target="_blank" rel="noopener">+ Google Calendar</a><a href="${icsHref(ev)}" download="${ev.id}.ics">+ Apple / Outlook (.ics)</a>`
       : "";
     const mapBtn = ev.pin ? `<button type="button" data-pin="${ev.id}">Show on map</button>` : "";
+    const on = stars.has(ev.id);
     return `<article class="card${ended ? " ended" : ""}" id="${ev.id}">
-      <div class="row1"><span class="time">${esc(ev.time)}</span>${badges(ev, now)}</div>
+      <button type="button" class="star" data-star="${ev.id}" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} my plan">${on ? "★" : "☆"}</button>
+      <div class="row1">${n ? `<span class="num">${n}</span>` : ""}<span class="time">${esc(ev.time)}</span>${badges(ev, now)}</div>
       <h3>${mdi(ev.name)}</h3>
       <p class="host">${mdi(ev.host)}</p>
       <div class="meta">
@@ -391,21 +447,52 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     const now = Date.now();
     const list = $("#list");
     let html = "", shown = 0;
+    const planEvs = [], order = new Map();
+    if (inPlanView()) DATA.days.flatMap((d) => d.events).filter(visible).forEach((e, i) => order.set(e.id, i + 1));
     for (const d of DATA.days) {
       const evs = d.events.filter(visible);
       if (!evs.length) continue;
       shown += evs.length;
+      planEvs.push(evs);
       const mon = Object.keys(MONTHS)[d.month];
       html += `<h2 class="day">${esc(d.weekday)}, ${mon} ${d.date}${d.suffix ? ` — ${mdi(d.suffix)}` : ""}</h2>`;
-      html += evs.map((e) => card(e, now)).join("");
+      const lg = inPlanView() ? legs(evs) : [];
+      html += evs.map((e, i) => (lg[i] || "") + card(e, now, order.get(e.id))).join("");
     }
-    list.innerHTML = html || `<p class="empty">No events match. Try another day or clear the search.</p>`;
+    let bar = "";
+    if (state.day === "shared") {
+      bar = `<div class="planbar"><b>Shared plan</b><button type="button" data-plan="import">★ Add to my plan</button><button type="button" data-plan="close">Close</button></div>`;
+    } else if (state.day === "plan" && stars.size) {
+      bar = `<div class="planbar"><button type="button" data-plan="share">Share link</button><a href="${icsHref(planEvs.flat())}" download="sc26-plan.ics">Add all to calendar</a></div>`;
+    }
+    const empty = state.day === "plan" ? "Tap ☆ on any event to add it to your plan." : "No events match. Try another day or clear the search.";
+    list.innerHTML = bar + (html || `<p class="empty">${empty}</p>`);
     externalLinks(list);
     const total = DATA.days.reduce((n, d) => n + d.events.length, 0);
-    $("#count").textContent = shown === total ? `${total} events` : `${shown} of ${total} events`;
+    $("#count").textContent = inPlanView() ? (state.day === "shared" ? `${shown} in shared plan` : `${shown} in your plan · saved in this browser only`) : shown === total ? `${total} events` : `${shown} of ${total} events`;
     $("#notes").innerHTML = state.day === "all" && !state.q ? DATA.notes.map((n) => `<p class="note">${mdi(n)}</p>`).join("") : "";
     externalLinks($("#notes"));
     document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.day === state.day)));
+    const pc = $("#planCount"); if (pc) pc.textContent = stars.size || "";
+
+    // route: plan events in time order, one line per day
+    if (map) {
+      if (route) { route.remove(); route = null; }
+      if (inPlanView()) {
+        const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+        const lines = planEvs.map((evs) => evs.filter((e) => e.pin).map((e) => e.pin.marker.getLatLng())
+          .filter((p, i, a) => !i || !p.equals(a[i - 1]))).filter((l) => l.length > 1);
+        const byPin = new Map();
+        planEvs.flat().filter((e) => e.pin).forEach((e) => byPin.set(e.pin, [...(byPin.get(e.pin) || []), order.get(e.id)]));
+        route = L.layerGroup([
+          L.polyline(lines, { color: accent, weight: 3, opacity: .85, dashArray: "6 6", interactive: false }),
+          ...[...byPin].map(([pin, nums]) => L.marker(pin.marker.getLatLng(), {
+            icon: L.divIcon({ className: "stop", html: nums.join(","), iconSize: [22, 22], iconAnchor: [11, 11] }),
+            keyboard: false, zIndexOffset: 1000,
+          }).on("click", () => openPin(pin))),
+        ]).addTo(map);
+      }
+    }
 
     // pins: emphasize venues with visible events
     if (map) {
@@ -420,7 +507,7 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
   }
 
   function buildChips() {
-    const chips = [`<button class="chip" data-day="all">All days</button>`].concat(
+    const chips = [`<button class="chip" data-day="plan">★ Plan<span class="n" id="planCount"></span></button>`, `<button class="chip" data-day="all">All days</button>`].concat(
       DATA.days.map((d) => `<button class="chip" data-day="${d.key}">${d.key} ${d.date}<span class="n">${d.events.length}</span></button>`));
     $("#days").innerHTML = chips.join("");
     $("#days").addEventListener("click", (e) => {
@@ -438,8 +525,11 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     try { const s = JSON.parse(localStorage.getItem("sc26-filters") || "null"); if (s) { state.day = s.day || "all"; state.hideClosed = !!s.hideClosed; } } catch (_) {}
     const t = chicagoToday(); // during SC26 week, open on today's tab
     const today = DATA.days.find((d) => d.month === t.month && d.date === t.date && DATA.year === t.year);
-    if (today) state.day = today.key;
-    if (!DATA.days.some((d) => d.key === state.day)) state.day = "all";
+    if (today && state.day !== "plan") state.day = today.key;
+    if (state.day !== "plan" && !DATA.days.some((d) => d.key === state.day)) state.day = "all";
+    if (state.day === "plan" && !stars.size) state.day = "all";
+    shared = readSharedFromHash();
+    if (shared.size) state.day = "shared";
     $("#hideClosed").checked = state.hideClosed;
   }
 
@@ -478,13 +568,37 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
 
       $("#q").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
       $("#hideClosed").addEventListener("change", (e) => { state.hideClosed = e.target.checked; save(); render(); });
-      $("#list").addEventListener("click", (e) => {
+      $("#list").addEventListener("click", async (e) => {
+        const s = e.target.closest("[data-star]");
+        if (s) {
+          const id = s.dataset.star;
+          stars.has(id) ? stars.delete(id) : stars.add(id);
+          saveStars(); render(false); return;
+        }
+        const p = e.target.closest("[data-plan]");
+        if (p) {
+          const act = p.dataset.plan;
+          if (act === "share") {
+            const ids = DATA.days.flatMap((d) => d.events).filter((x) => stars.has(x.id)).map((x) => short(x.id));
+            const url = `${location.origin}${location.pathname}#plan=${ids.join(",")}`;
+            try {
+              if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ title: "My SC26 plan", url });
+              else { await navigator.clipboard.writeText(url); p.textContent = "Link copied ✓"; setTimeout(() => (p.textContent = "Share link"), 1500); }
+            } catch (_) { window.prompt("Copy this link:", url); }
+            return;
+          }
+          if (act === "import") shared.forEach((id) => stars.add(id)), saveStars();
+          history.replaceState(null, "", location.pathname + location.search);
+          shared = new Set(); state.day = act === "import" ? "plan" : "all"; save(); render();
+          return;
+        }
         const b = e.target.closest("[data-pin]"); if (!b) return;
         const ev = events.find((x) => x.id === b.dataset.pin);
         if (!ev || !ev.pin) return;
         if (matchMedia("(max-width: 900px)").matches) $("#mapcol").scrollIntoView({ behavior: "smooth", block: "start" });
         openPin(ev.pin, true);
       });
+      window.addEventListener("hashchange", () => { const s = readSharedFromHash(); if (s.size) { shared = s; state.day = "shared"; render(); } });
       setInterval(() => render(false), 5 * 60e3); // refresh "happening now" during the week
       if (location.hash) setTimeout(() => { const el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }, 50);
     } catch (err) {
