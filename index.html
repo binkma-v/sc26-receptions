@@ -116,6 +116,11 @@ h2.day em { text-transform: none; letter-spacing: 0; font-weight: 400; }
 .leg.bad { color: var(--warn); }
 .planbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 12px; font-size: 13px; }
 .planbar button, .planbar a { font: inherit; font-size: 13px; border: 1px solid var(--border); background: var(--surface); color: var(--accent); border-radius: 8px; padding: 5px 10px; cursor: pointer; text-decoration: none; }
+dialog.review { width: min(560px, calc(100vw - 32px)); max-height: 85vh; padding: 0; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); }
+dialog.review::backdrop { background: rgba(0,0,0,.45); }
+.review header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--surface); }
+.review header button { border: 0; background: none; font-size: 22px; line-height: 1; color: var(--muted); cursor: pointer; }
+.review .giscus { padding: 10px 14px 14px; min-height: 180px; }
 .note { color: var(--muted); font-size: 14px; margin: 10px 0; }
 .empty { color: var(--muted); padding: 24px 0; text-align: center; }
 
@@ -180,6 +185,8 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
 </main>
 
 <section class="wrap more" id="more"></section>
+
+<dialog class="review" id="review"><header><b id="reviewTitle"></b><button type="button" id="reviewClose" aria-label="Close">×</button></header><div id="reviewBox"></div></dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
@@ -398,6 +405,22 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
   }
   let route = null;
 
+  // ---------- reviews (giscus → GitHub Discussions, one thread per event) ----------
+  const GISCUS = { repo: "binkma-v/sc26-receptions", "repo-id": "R_kgDOVrLOWA", category: "Announcements", "category-id": "DIC_kwDOVrLOWM4DK7tE" };
+  const nowMs = () => { const p = new URLSearchParams(location.search).get("now"); return (p && Date.parse(p)) || Date.now(); }; // ?now= lets you preview
+  function openReview(ev) {
+    $("#reviewTitle").textContent = plain(ev.name);
+    const box = $("#reviewBox");
+    box.innerHTML = '<div class="giscus"></div>';
+    const s = document.createElement("script");
+    s.src = "https://giscus.app/client.js"; s.async = true; s.crossOrigin = "anonymous";
+    Object.entries({ ...GISCUS, mapping: "specific", term: `${plain(ev.name)} · ${ev.day.key} ${ev.time}`, strict: "1",
+      "reactions-enabled": "1", "emit-metadata": "0", "input-position": "top", theme: "preferred_color_scheme", lang: "en" })
+      .forEach(([k, v]) => s.setAttribute("data-" + k, v));
+    box.appendChild(s);
+    $("#review").showModal();
+  }
+
   // ---------- state & render ----------
   const state = { day: "all", q: "", hideClosed: false };
   let DATA = null;
@@ -428,7 +451,8 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
     const cal = ev.start
       ? `<a href="${gcalHref(ev)}" target="_blank" rel="noopener">+ Google Calendar</a><a href="${icsHref(ev)}" download="${ev.id}.ics">+ Apple / Outlook (.ics)</a>`
       : "";
-    const mapBtn = ev.pin ? `<button type="button" data-pin="${ev.id}">Show on map</button>` : "";
+    const mapBtn = (ev.start && now >= ev.start ? `<button type="button" data-review="${ev.id}">★ Review</button>` : "") +
+      (ev.pin ? `<button type="button" data-pin="${ev.id}">Show on map</button>` : "");
     const on = stars.has(ev.id);
     return `<article class="card${ended ? " ended" : ""}" id="${ev.id}">
       <button type="button" class="star" data-star="${ev.id}" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} my plan">${on ? "★" : "☆"}</button>
@@ -444,7 +468,7 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
   }
 
   function render(refit = true) {
-    const now = Date.now();
+    const now = nowMs();
     const list = $("#list");
     let html = "", shown = 0;
     const planEvs = [], order = new Map();
@@ -517,7 +541,7 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
   }
 
   function chicagoToday() {
-    const now = new Date(Date.now() - UTC_OFFSET_HOURS * 3600e3);
+    const now = new Date(nowMs() - UTC_OFFSET_HOURS * 3600e3);
     return { month: now.getUTCMonth(), date: now.getUTCDate(), year: now.getUTCFullYear() };
   }
   function save() { try { localStorage.setItem("sc26-filters", JSON.stringify({ day: state.day, hideClosed: state.hideClosed })); } catch (_) {} }
@@ -568,7 +592,11 @@ section.more sub { color: var(--muted); font-size: 13px; display: block; margin-
 
       $("#q").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
       $("#hideClosed").addEventListener("change", (e) => { state.hideClosed = e.target.checked; save(); render(); });
+      $("#reviewClose").addEventListener("click", () => $("#review").close());
+      $("#review").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
       $("#list").addEventListener("click", async (e) => {
+        const r = e.target.closest("[data-review]");
+        if (r) { const ev = events.find((x) => x.id === r.dataset.review); if (ev) openReview(ev); return; }
         const s = e.target.closest("[data-star]");
         if (s) {
           const id = s.dataset.star;
