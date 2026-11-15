@@ -468,6 +468,24 @@
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.624752,
+          41.871701
+        ]
+      },
+      "properties": {
+        "venue": "Grant Park Bistro",
+        "address": "800 S Michigan Ave, Chicago, IL",
+        "events": "Wed 08:30–10:30 — Breakfast with Yotta Labs (Yotta Labs; hot breakfast buffet, drop in anytime) @ Ivy Room",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Grant%20Park%20Bistro%2C%20800%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL",
+        "marker-color": "#d73a49",
+        "marker-symbol": "bar"
+      }
     }
   ]
 }

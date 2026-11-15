@@ -73,6 +73,7 @@ A community list of receptions, parties, happy hours, and networking socials hap
 | Time | Event | Host / Notes | Venue | Registration |
 |---|---|---|---|---|
 | 08:00–10:00 | Breakfast @ SC26 | VAST Data | [📍 Revel Motor Row](https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2400 S Michigan Ave | Register — [VAST](https://events.vastdata.com/joinusforbreakfastatsc26) |
+| 08:30–10:30 | Breakfast with Yotta Labs | Yotta Labs; hot breakfast buffet, drop in anytime; chat about GPU compute & inference | [📍 Grant Park Bistro](https://www.google.com/maps/search/?api=1&query=Grant%20Park%20Bistro%2C%20800%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>800 S Michigan Ave<br>*Ivy Room — enter via the restaurant on Michigan Ave* | Free, host approval required — [Luma](https://luma.com/pcu7ij7n) |
 | 12:00–14:00 | SLED AI Industry Roundtable | VAST Data × Cambridge Computer × NVIDIA; lunch discussion for higher-ed & research computing leaders | [📍 Revel Motor Row](https://www.google.com/maps/search/?api=1&query=Revel%20Motor%20Row%2C%202400%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL)<br>2400 S Michigan Ave | Register — [VAST](https://events.vastdata.com/sc26sledroundtable) |
 | 14:00–16:00 | Tiki Bar Happy Hour | MinIO + **NVIDIA** | [📍 McCormick Place](https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL)<br>*MinIO booth #1016* | Walk-up at booth — [MinIO SC26 page](https://www.min.io/events/lp/minio-sc26) |
 | 15:00–17:00 | Happy Hour | TrueNAS × Western Digital | [📍 McCormick Place](https://www.google.com/maps/search/?api=1&query=McCormick%20Place%2C%202301%20S%20King%20Dr%2C%20Chicago%2C%20IL)<br>*TrueNAS booth #5005* | Register — [Luma](https://luma.com/tr6mti78) |
@@ -146,4 +147,4 @@ Without the browser tools connected, the skill falls back to a click-through che
 
 ---
 
-<sub>Last updated November 11, 2026 · Times and venues may change — check the links</sub>
+<sub>Last updated November 14, 2026 · Times and venues may change — check the links</sub>
