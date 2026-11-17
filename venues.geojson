@@ -486,6 +486,24 @@
         "marker-color": "#d73a49",
         "marker-symbol": "bar"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.626278,
+          41.853895
+        ]
+      },
+      "properties": {
+        "venue": "Mae District",
+        "address": "19 E 21st St, Chicago, IL",
+        "events": "Tue 19:00–23:00 — NVIDIA and Google Cloud SC26 Reception (NVIDIA × Google Cloud)",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Mae%20District%2C%2019%20E%2021st%20St%2C%20Chicago%2C%20IL",
+        "marker-color": "#d73a49",
+        "marker-symbol": "bar"
+      }
     }
   ]
 }

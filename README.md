@@ -67,6 +67,7 @@ A community list of receptions, parties, happy hours, and networking socials hap
 | 18:30–21:30 | SC26 Networking Event | Lenovo with **AMD**, **Intel** & **NVIDIA**; racing simulators | [📍 F1 Arcade](https://www.google.com/maps/search/?api=1&query=F1%20Arcade%2C%201%20W%20Grand%20Ave%2C%20Chicago%2C%20IL)<br>1 W Grand Ave | Register — [Lenovo](https://lenovo-events.swoogo.com/sc26networking) |
 | 19:00–22:00 | Industry Reception | HPE, sponsored by **AMD** | [📍 Adler Planetarium](https://www.google.com/maps/search/?api=1&query=Adler%20Planetarium%2C%201300%20S%20DuSable%20Lake%20Shore%20Dr%2C%20Chicago%2C%20IL)<br>1300 S DuSable Lake Shore Dr | **No RSVP — badge only** — [HPE at SC26](https://www.hpe.com/us/en/events/supercomputing.html) |
 | 19:00–22:00 | Networking Reception | Oracle, co-sponsored by NVIDIA | [📍 Untitled Supper Club](https://www.google.com/maps/search/?api=1&query=Untitled%20Supper%20Club%2C%20111%20W%20Kinzie%20St%2C%20Chicago%2C%20IL)<br>111 W Kinzie St | ⚠️ Unverified — no public listing found (reported as registration closed) |
+| 19:00–23:00 | NVIDIA and Google Cloud SC26 Reception | **NVIDIA** × Google Cloud; a separate event from Monday's GCACC rooftop reception | [📍 Mae District](https://www.google.com/maps/search/?api=1&query=Mae%20District%2C%2019%20E%2021st%20St%2C%20Chicago%2C%20IL)<br>19 E 21st St | RSVP — [Google](https://rsvp.withgoogle.com/events/google-cloud-nvidia-sc26-reception) |
 
 ### Wednesday, Nov 18
 
@@ -103,8 +104,6 @@ A community list of receptions, parties, happy hours, and networking socials hap
 
 *Wed Nov 18, 18:30–21:30: **Spack User Group Happy Hour** (sponsored by Susquehanna) — venue not announced yet; see [HPSF](https://hpsf.io/event/sc26/).*
 
-*Date and venue not yet public: **Google Cloud & NVIDIA SC26 Reception** — [RSVP page](https://rsvp.withgoogle.com/events/google-cloud-nvidia-sc26-reception) (a separate event from the GCACC rooftop reception on Monday).*
-
 ---
 
 ## 🔎 Looking for a specific company?
@@ -116,11 +115,11 @@ A community list of receptions, parties, happy hours, and networking socials hap
 - **Cisco** — Pre-Gala Reception (Mon 16:45) and the invitation-only 200kW Happy Hour (Wed 18:30), both at Cisco Studio, 2337 S Michigan Ave.
 - **Dell Technologies** — karaoke night with Carahsoft for public-sector attendees (Tue 18:00, Sakura Karaoke Bar), and a Petaflop sponsor.
 - **DDN** — DDN Convergence summit with a networking reception (Mon 16:30–17:30, Revel Motor Row), supported by NVIDIA.
-- **Google Cloud** — Advanced Computing Community rooftop reception (Mon 17:00, VU Rooftop), plus a joint reception with NVIDIA (date/venue on its RSVP page).
+- **Google Cloud** — Advanced Computing Community rooftop reception (Mon 17:00, VU Rooftop), plus a joint reception with NVIDIA (Tue 19:00, Mae District).
 - **Intel** — Lenovo's F1 Arcade night (Tue 18:30) and the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
 - **Lenovo** — SC26 Networking Event with AMD, Intel & NVIDIA at F1 Arcade (Tue 18:30–21:30).
 - **Supermicro** — the 200kW Happy Hour at Cisco Studio (Wed 18:30, invitation only).
-- **NVIDIA** — Cambridge client dinner (Mon, invitation only), Petaflop and Lenovo's F1 Arcade night (Tue), the MinIO Tiki Bar (Wed 14:00), the 200kW Happy Hour (Wed, invitation only), and a joint reception with Google Cloud (date TBA).
+- **NVIDIA** — Cambridge client dinner (Mon, invitation only), Petaflop and Lenovo's F1 Arcade night (Tue), the MinIO Tiki Bar (Wed 14:00), the 200kW Happy Hour (Wed, invitation only), and a joint reception with Google Cloud (Tue 19:00, Mae District).
 - **TensorWave** — On Tap, Off the Record with VAST Data (Tue 18:30, Fatpour).
 - **Women in HPC** — Networking Reception (Tue 18:00, L7 Chicago; ticket from the WHPC Workshop) and Games Night (Wed 17:00, McCormick W196-A, open).
 - **VAST Data** — After Hours at Spybar and the Nightcap with Cerebras (Mon), TensorWave happy hour (Tue), and on Wed a breakfast and SLED lunch roundtable at Revel Motor Row plus Hops & Flops with ByteBridge.
@@ -128,7 +127,7 @@ A community list of receptions, parties, happy hours, and networking socials hap
 ## ⚠️ Scheduling collisions worth knowing
 
 - **Monday night:** the Grand Opening Gala (19:00–21:00) runs into the VAST & Cerebras nightcap (20:00–22:00) at Fatpour, right next to McCormick Place. Beowulf Bash (21:00–midnight) is up in Bucktown — a cab ride.
-- **Tuesday night is the crunch:** Posters Reception, Petaflop, HPE/AMD, WHPC, Arista, Netris, Dell karaoke, Lenovo, AMD + Oxide, VAST × TensorWave, and Behind the Build all overlap — realistically pick two. Field Museum and Adler Planetarium are a ~10-min walk apart on the Museum Campus (Petaflop also runs a free shuttle from McCormick); the River North venues (Lenovo, Arista, Oracle) are a cab ride away.
+- **Tuesday night is the crunch:** Posters Reception, Petaflop, HPE/AMD, WHPC, Arista, Netris, Dell karaoke, Lenovo, AMD + Oxide, VAST × TensorWave, Behind the Build, and NVIDIA × Google Cloud all overlap — realistically pick two. Field Museum and Adler Planetarium are a ~10-min walk apart on the Museum Campus (Petaflop also runs a free shuttle from McCormick); NVIDIA × Google Cloud at Mae District is a few blocks west of McCormick and runs latest (until 23:00); the River North venues (Lenovo, Arista, Oracle) are a cab ride away.
 - **Wednesday afternoon:** booth happy hours (TrueNAS 15:00, AWS 16:00, HLRS 16:00) overlap the Public Sector Gathering (16:00–17:30, Fatpour) and the Students & Early Career Reception (16:30–18:00); WHPC Games Night runs 17:00–20:00 if you want something low-key.
 - **Wednesday night is the second crunch:** WEKA's Taste of Chicago (shuttles from McCormick), A Night at the Museum, HPC Gala, Everpure, VAST × ByteBridge, Cisco's 200kW Happy Hour, and the Whiskey Society all start between 18:00 and 19:00. Fatpour, Cisco Studio, Chicago Oyster House, and Revel are all within a few blocks of McCormick Place.
 
